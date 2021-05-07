@@ -1,0 +1,335 @@
+.Content{
+   margin-top:75px;
+}
+
+.Container{
+   display:flex;
+   width:100%;
+   flex-flow: column;
+   align-items: center;
+   
+   padding:10px 0;
+   box-shadow: 0 2px 1px #ccc;
+   background-color:#CF8F2E;
+   margin: 15px auto 0 auto;
+}
+
+.ingredientStyle{
+   display:flex;
+   flex-direction:row;
+   justify-content:space-between;
+   align-items:center;
+   /* width:30%; */
+   margin:5px 0;
+}
+.ingredientName{
+   font-size:19px;
+   font-weight:bold;
+   margin-right:20px;
+   text-transform:capitalize;
+}
+.ingredientControl{
+   display:flex;
+   flex-direction:row;
+}
+.ingredientControl p{
+   color:#fff;
+   font-style:italic;
+}
+.ingredientBtns{
+   display:flex;
+   flex-direction:row;
+   padding: 5px 18px;
+   font:inherit;
+   border:1px solid #AA6817;
+   background: #8F5E1E;
+   color:#fff;
+   /* width:80px; */
+   margin:0 5px;
+   cursor:pointer;
+   outline: none;
+   text-align:center !important;
+}
+.Less{
+   background: #D39952;
+}
+
+.disabledLessBtn, .disabledOrderBtn{
+   opacity: 0.6;
+   cursor: not-allowed !important;
+   border: 1px solid rgba(65, 65, 65,0.5);
+}
+.orderBtnStyle{
+   font-size:18px;
+   margin: 15px auto;
+   padding:10px 18px;
+   text-transform: uppercase;
+   background-color: rgb(208, 224, 63);
+   color:rgb(87, 59, 25);
+   border:none !important;
+   box-shadow: 2px 2px 1px rgb(87, 59, 25);
+   animation: jumpEffect 1s linear backwards;
+   cursor:pointer;
+}
+@keyframes jumpEffect {
+   0%{
+      transform: scale(1.0);
+   }
+   10%{
+      transform: scale(1.05);
+   }
+   50%{
+      transform: scale(1.09)
+   }
+   80%{
+      transform: scale(1.05);
+   }
+   100%{
+      transform: scale(1.0);
+   }
+}
+
+.myModal{
+   position: fixed;
+   top:30%;
+   left:20%; /* center modal vertically and horizontally */
+   transform: translate(-50%, -50%);
+   width: 60%;
+   height:auto;
+   padding:25px;
+   border-radius: 5px;
+   background-color:#fff;
+   transition: all 0.3s ease-out;
+   z-index:10000;
+}
+.modalBody{
+   margin: 9px 0; 
+   line-height:1.5;
+   z-index:1000;
+}
+.backdrop{
+   position: fixed;
+   width:100%;
+   height:100vh;
+   top:0px;
+   left:0px;
+   background-color: rgba(0,0,0,0.5);
+   z-index:20;
+}
+.cancelBtn{
+   background-color:transparent;
+   color: #944317;
+   font-size:20px;
+   border:none;
+   cursor:pointer;
+   margin-right: 14px;
+   outline: none;
+}
+.continueBtn{
+   background-color:transparent;
+   color:#5C9210;
+   font-size:20px;
+   border:none;
+   cursor:pointer;
+   outline: none;
+   transition: all 0.6s ease-in-out;
+}
+.cancelBtn:hover{
+   color: red;
+}
+.continueBtn:hover{
+   color:green;
+}
+.cancelBtn:active, .continueBtn:active{
+   outline:none !important;
+}
+.toolbar{
+   position:fixed;
+   top:0px;
+   left:0px;
+   padding:5px 20px;
+   height:50px;
+   width:100%;
+   background-color:#703B09;
+   z-index:20;
+   display:flex;
+   flex-direction: row;
+   justify-content:space-between;
+   align-items:center;
+
+}
+.toolbarOptionsBtn{
+   border: none;
+   display:none;
+   background:transparent;
+   cursor:pointer;
+   height:40px;
+   padding:2px;
+   width:30px;
+   margin-top:5px;
+   z-index:40;
+   outline:none;
+}
+.toolbarOptionsBtn:focus{
+   outline:none;
+}
+.toolbarOptionsBtn > div{
+   height:2px;
+   background:#fff;
+   margin-bottom:6px;
+}
+.burgerLogo{
+   width:40px;
+   height:100%;
+}
+.logoContainer{
+   height:100%;
+   padding:8px;
+   background:#fff;
+   border-radius: 5px;
+}
+.sideDrawer{
+   position:fixed;
+   top:0;
+   left:0;
+   z-index:20;
+   height:100%;
+   width:280px;
+   max-width:70%;
+   padding: 32px 16px;
+   background-color:#fff;
+   transition: transform 1s ease-in-out;
+   display:none;
+}
+
+.burgerPic{
+   display:flex;
+   justify-content:center;
+   padding: 20px 0;
+   margin: 0 auto;
+   width:60%;
+
+}
+.naviItems{
+   margin:0;
+   padding:0;
+   list-style:none;
+   display: flex;
+   align-items:center;
+   height:100%;
+}
+.naviItem{
+   margin:0;  
+   text-align:center;
+   height:100%;
+}
+.extraIngs{
+   margin-top:5px;
+}
+.naviItem a{
+   text-decoration:none;
+   color:#fff;
+   padding:12px 10px; 
+   height:100%;
+   border-bottom: 4px solid transparent;
+}
+.naviItem a:active, /* when clicked on */
+.navItem a:hover,  /*when hovered on*/
+a.active{  /*active here is a normal class name*/
+   background-color:#8F5C2C;
+   border-bottom: 4px solid #40A4C8;
+   color:#fff;
+}
+#loading{
+
+   width:100px;
+   height:100px;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   border-radius: 50%;
+   background: linear-gradient(rgb(190, 90, 43), rgb(252, 252, 252));
+   animation: spin 1s linear infinite;
+   margin: 100px auto;
+}
+#loading:after{
+   content:"Loading..";      /*text*/
+   text-align:center;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   background-color: #fff;
+   width:90%;
+   height:90%;
+   border-radius: 50%;
+   animation: spinBack 1s linear infinite;
+}
+.error404{
+   text-align:center;
+}
+@keyframes spin{
+   0%{
+      transform: rotate(0deg);
+   }
+   50%{
+      transform: rotate(180deg);
+   }
+   100%{
+      transform: rotate(360deg);
+   }
+   
+}
+ @keyframes spinBack{    /* spins back in the reversed direction to keep the "loading " text consistant and in place  */
+   0%{
+      transform: rotate(360deg);
+   }
+   50%{
+      transform: rotate(180deg);
+   }
+   100%{
+     
+      transform: rotate(0deg);
+   }
+}
+
+@media only screen and (max-width: 500px){
+   .toolbarOptionsBtn, .sideDrawer{
+      display:block;
+   }
+   .naviItems{
+      display:block;
+      height:50px;
+   }
+   .naviItem a{
+      padding:4px;
+      margin-bottom:15px !important;
+      border: none !important;
+      color: #8F5C2C;
+   }
+   
+   a.active{
+      background-color: transparent !important;
+      color:#40A4C8;
+   }
+   .desktopOnly{
+      display:none;
+   }
+   .ingredientBtns{
+      padding: 4px 10px;
+   }
+   .logoContainer{
+     align-self:flex-end !important;
+   }
+   .myModal{
+      top:15%;
+      left:8%; /* center modal vertically and horizontally */
+      transform: translate(-50%, -50%);
+      width:80%;
+   }
+}
+@media only screen and (max-width:600px){
+   .ingredientName{
+      font-size:17px;
+   }
+
+}

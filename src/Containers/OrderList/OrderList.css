@@ -1,0 +1,29 @@
+.ordersContainer{
+    margin-top:-25px;
+    padding:50px 10px;
+    width:100%;
+    min-height:100vh;
+    height:auto;
+    padding:25px;  
+    background-color: #eee;
+}
+.ordersContainer div div{
+    list-style: none;
+}
+.orderCard{
+    display:flex;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    flex-direction:column;
+    justify-content:center;
+    width: 450px;
+    margin: 0 auto;
+    background-color:rgb(202, 115, 44);
+    border-radius: 10px;
+    padding:20px;
+}
+
+@media only screen and (max-width: 600px){
+    .orderCard{
+        width:95% !important;
+    }
+}
